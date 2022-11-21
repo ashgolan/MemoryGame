@@ -1,7 +1,12 @@
+import React from 'react'
 
-export function Winner (){
-    return(
-        <h1>You win!</h1>
-    )
-
+function Winner() {
+  return (
+  <>
+      <div>Winner</div>
+      <h1>test</h1>
+    </>
+  );
 }
+
+export default Winner
