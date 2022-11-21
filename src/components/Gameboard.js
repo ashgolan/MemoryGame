@@ -27,8 +27,8 @@ export function Gameboard(props) {
       console.log(targetOfCard.target1.target.className);
       console.log(card2.className);
       if (targetOfCard.target1.target.className === card2.className) {
-        targetOfCard.target1.target.classList.add("black");
-        card2.classList.add("black");
+        targetOfCard.target1.target.classList.remove("black");
+        card2.classList.remove("black");
       }
       setTimeout(() => {
         setCardMatch((prev) => {
@@ -52,7 +52,7 @@ export function Gameboard(props) {
               onClick={(e) => {
                 clickHandler(e);
               }}
-              className={card}
+              className={`${card} black`}
             >
               {card}
             </div>
