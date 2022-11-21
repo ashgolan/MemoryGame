@@ -1,31 +1,41 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 .Board {
-  width: 100vw;
+  width: 50vw;
+  margin: auto;
 }
 
 .card-grid {
   margin-top: 40px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 5px;
+  grid-gap: 2px;
 }
 
 .image1 {
-  background-color: red;
+  background-image: url("/public/images/amy-baugess-MNju0A6EeE0-unsplash.jpg");
+  background-size: cover;
 }
 .image2 {
-  background-color: rgb(51, 172, 14);
+  background-image: url("/public/images/daria-shatova-46TvM-BVrRI-unsplash.jpg");
+  background-size: cover;
 }
 .image3 {
-  background-color: rgb(217, 224, 214);
+  background-image: url("/public/images/kate-stone-matheson-uy5t-CJuIK4-unsplash.jpg");
+  background-size: cover;
 }
 .image4 {
-  background-color: rgb(10, 134, 156);
+  background-image: url("/public/images/kristina-yadykina-21NRDbMJF94-unsplash.jpg");
+  background-size: cover;
 }
 .image5 {
-  background-color: rgb(255, 0, 179);
+  background-image: url("/public/images/lloyd-henneman-mBRfYA0dYYE-unsplash.jpg");
+  background-size: cover;
 }
 .image6 {
-  background-color: rgb(90, 76, 76);
+  background-image: url("/public/images/roberto-huczek-oA6zqMdnhjE-unsplash.jpg");
+  background-size: cover;
 }
 .image1,
 .image2,
@@ -33,9 +43,13 @@
 .image4,
 .image5,
 .image6 {
+  transition: transform 0.5s;
   width: 100%;
   height: 20vh;
+  cursor: pointer;
 }
 .backColor {
-  background-color: rgb(202, 199, 13);
+  transform: rotateY(180deg);
+  background-image: url("/public/images/cat-wallpaper-cats-41242864-800-600.jpg.crdownload");
+  background-size: cover;
 }
