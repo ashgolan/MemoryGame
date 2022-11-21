@@ -8,6 +8,8 @@ export function Gameboard(props) {
   const [targetOfCard, setTargetCard] = useState({
     target1: null,
   });
+  const [wrongAnswer, setWrongAnswer] = useState(0);
+  const [rightAnswer, setRightAnswer] = useState(0);
 
   const clickHandler = (e) => {
     // let card1;
@@ -29,6 +31,9 @@ export function Gameboard(props) {
       if (targetOfCard.target1.target.className === card2.className) {
         targetOfCard.target1.target.classList.remove("black");
         card2.classList.remove("black");
+        setRightAnswer((prev) => prev + 1);
+      } else {
+        setWrongAnswer((prev) => prev + 1);
       }
       setTimeout(() => {
         setCardMatch((prev) => {
@@ -44,6 +49,8 @@ export function Gameboard(props) {
       </h2>
       {cardMatch.card1Status === cardMatch.card2Status &&
         cardMatch.card1Status !== null && <h2>match</h2>}
+      <h1>{wrongAnswer}</h1>
+      {rightAnswer === props.randomCards.length / 2 && <h1>Win</h1>}
       <h1>Memory Card Game</h1>
       <div className="card-grid">
         {props.randomCards.map((card, index) => (
