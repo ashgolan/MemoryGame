@@ -29,8 +29,8 @@ export function Gameboard(props) {
       console.log(targetOfCard.target1.target.className);
       console.log(card2.className);
       if (targetOfCard.target1.target.className === card2.className) {
-        targetOfCard.target1.target.classList.remove("black");
-        card2.classList.remove("black");
+        targetOfCard.target1.target.classList.remove("backColor");
+        card2.classList.remove("backColor");
         setRightAnswer((prev) => prev + 1);
       } else {
         setWrongAnswer((prev) => prev + 1);
@@ -59,10 +59,8 @@ export function Gameboard(props) {
               onClick={(e) => {
                 clickHandler(e);
               }}
-              className={`${card} black`}
-            >
-              {card}
-            </div>
+              className={`${card} backColor`}
+            ></div>
           </div>
         ))}
       </div>
