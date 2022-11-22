@@ -59,6 +59,7 @@ export function Gameboard(props) {
           <img
             style={{ width: "350px", margin: "auto" }}
             src="images/done.png"
+            alt="done"
           ></img>
           <audio autoPlay ref={win} src="/audio/win.mp3"></audio>
         </>
